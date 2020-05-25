@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Redhead</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/icon">
+  <link rel="icon" href="/static/images/favicon.ico" type="image/icon">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/static/css/redhead.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span class="company"><a href="/"><i class="fas fa-robot"></i>Redhead</a></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcontrol"
+      aria-controls="navcontrol" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+      <span class="mr-auto">&nbsp;</span>
+      <ul class="navbar-nav my-2 my-md-0">
+        <li class="nav-item ">
+          <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main role="main" class="container">
+    <div class="row">
+      <div id="redheadDisplay" class="col-lg-10" style="height: 100vh;">
+        <iframe style="height:100%;width:100%"src="http://192.168.1.58:8000/index.html"></iframe>
+      </div>
+      <div class="col-lg-2 map-form">
+        <h5>Help (Control - h)</h5>
+        <h5>Control</h5>
+        <div class="col-xs-12 text-center" style="font-size:1.2em;">
+          Velocity <span id="fwd_label_id" style="font-weight:bold;">0</span>
+        </div>
+        <div class="col-xs-12 text-center" style="height:125px">
+          <input id="fwd_slider" type="range" min="-255" max="255" step="15" value="0"
+            style="-webkit-transform: rotate(270deg);width:100px;margin:50px 0 0 auto;"/>
+        </div>
+
+        <div class="col-xs-12 text-center" style="font-size:1.2em;">
+          Tiller <span id="str_label_id" style="font-weight:bold;">0</span>
+        </div>
+        <div class="col-xs-12 text-center">
+          <input id="str_slider" type="range" min="-1" max="1" step="1" value="0" style="width:100px; margin:0 auto;"/>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" tabindex="-1" role="dialog" id="buildHelp">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Help</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Create a set of lines that identify paths that a robot may take. To create a line, you will identify start
+            and end points then create a line. You may select existing points and lines. You may delete lines and
+            points, but only with the hotkeys.</p>
+          <p class="lead">Steps</p>
+          <ol>
+            <li>Position and zoom map on area to be worked or load existing map.</li>
+            <li>Click on map to create a start point.</li>
+            <li>Click on map to create an end point.</li>
+            <li>Click on Add Line button to link points.</li>
+            <li>Repeat steps 3 and 4 to create a continuing path. Select existing points as start points to create
+              branches.</li>
+            <li>Name your map with a map key and SAVE it. Very important SAVE it.</li>
+          </ol>
+          <p class="lead">Hotkeys</p>
+          <ul>
+            <li>Help (Control - h)</li>
+            <li>Create Line (Control - d)</li>
+            <li>Delete Point (Control - s)</li>
+            <li>Delete Line (Control - x)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/js/redhead.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  </body>
+</html>
